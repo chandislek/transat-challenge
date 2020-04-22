@@ -1,0 +1,22 @@
+#NAVIGATION MARITIME à la VOILE
+
+la mission d'un navire est de suivre une route pour se rendre au point d'arrivé depuis sa position instantanée; 
+potentiellement des points de passage intermédiaire sont ajoutés pour vérifier son fonctionnement optimum.
+
+cette route est dépendante des conditions météorologiques comme la direction du vent et sa force, la hauteur des vagues
+et leur direction, la force du courant et sa direction.
+
+des conditions de traffic maritime, des objets flottants non identifiés (OFNI), 
+
+des hauts fonds apparants selon la hauteur de marée.
+
+
+La navigation d'un voilier est de plus dépendant de son diagramme polaire; c'est sa carte génétique révélée à sa construction
+qui exprime un comportement à la jonction de l'air et de la mer.
+
+c'est la raison pour laquelle un voilier ne peut pas avancer face au vent, en direction direct du vent. 
+selon la direction prise par rapport au vent, sa vitesse sera variable depuis un minimum, augmentera jusqu'à un maximum à 90° degrés
+du vent, puis diminuera jusqu'à faire un angle de 180° degrés du vent (vent arrière).
+
+ce diagramme de vitesse dépend de la force du vent et de la hauteur des vagues (échelle de Beaufort); au-délà d'une force de vent,
+la vitesse du voilier va diminuer.
