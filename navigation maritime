@@ -1,6 +1,6 @@
 #NAVIGATION MARITIME à la VOILE
 
-la mission d'un navire est de suivre une route pour se rendre au point d'arrivé depuis sa position instantanée; 
+la mission d'un navire est de suivre une route pour se rendre au point d'arrivée depuis sa position instantanée; 
 potentiellement des points de passage intermédiaire sont ajoutés pour vérifier son fonctionnement optimum.
 
 cette route est dépendante des conditions météorologiques comme la direction du vent et sa force, la hauteur des vagues
