@@ -1,2 +1,15 @@
 # MAINTIEN OPERATIONNEL
 
+la chaîne de réponse décisionnelle est le cumul d'information entrée dans le système: météo, déplacement, détection de proximité, alerte,
+qui sont traitées au fil chronologique de leur présence selon un protocole de pondération prioritaire,
+puis traduitent en actions mécaniques localement sur le voilier, ainsi qu'en émission télémétrique par les canaux de communication aérien.
+
+l'arrêt du circuit opérationnel enferme le navire dans une position d'isolement et de paralysie d'action; 
+c'est la certitude de l'échec de la mission.
+
+l'autonomie est atteinte avec le suivi et l'entretien des ressources : l'energie du soleil est vitale pour le fonctionnement instantané
+et le surplus est emmagasiné dans une batterie, afin de fournir l'électricité pendant la nuit.
+
+le contrôle de la consommation d'énergie rapportée à son stock disponible défini des niveaux de survie opérationnelle, 
+autorisant ou limitant successivement les fonctionnalités d'importance prioritaire croissante : le changement de direction 
+d'évitement d'obstacle est la priorité la plus haute de jour et l'envoi du signal de détresse de collision la plus haute la nuit.
