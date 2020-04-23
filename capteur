@@ -1,0 +1,21 @@
+#CAPTEUR ENVIRONNEMENTAL
+
+l'enregistrement et l'envoi par télémétrie des informations sont nécessaires à un voilier autonome:
+
+1) Mission
+la couche relative à la mission vérifie la direction et le force du vent apparent (anémomètre-girouette) pour déterminer 
+les directions possibles en accord avec le diagramme polaire du voilier,
+la vitesse de déplacement (loch) confirme l'optimisation du cap et donne des précisions pour la détermination du vent réel,
+
+
+2) Survie
+la couche relative à la survie vérifie l'angle de barre en coordination avec le compas (cap magnétique),
+le gyroscope-accéleromètre confirme la gite et l'optimisation du réglage des voiles en coordination avec le vent,
+l'emetteur et récepteur AIS confirme la sécurité du voilier en coordination avec la circulation des autres navires,
+le sondeur confirme la sécurité du voilier en coordination avec la hauteur des marées,
+la caméra en tête de mat confirme l'ouverture de la route,
+
+
+3) Autonomie
+la couche relative à l'autonomie vérifie l'ampérage des panneaux solaires en coordination avec la tension des batteries,
+le positionneur GPS confirme la route en coordination avec le courant et le vent, 
