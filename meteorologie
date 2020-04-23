@@ -1,0 +1,16 @@
+#ANTICIPATION METEOROLOGIQUE
+
+Fichiers GRIB:
+
+la connaissance prévisionnelle de la force et la direction du vent, qui s'affine par chronologie décroissante,
+réduit la plage de potentiel dans la prise de décision de la route à suivre, en coordination avec le diagramme polaire du voilier.
+
+l'importance d'avoir des points de route intermédiaire selon la rapidité (t) de l'évolution de la météo, correspond à 
+optimiser la couche de survie en milieu agressif.
+
+la portion entre deux points de route successifs (d1) doit se situer dans une configuration météorologique favorable 
+à l'avancement pendant la période (t1) pondérée par le ratio de la vitesse d'avancement réelle et 
+la vitesse d'avancement moyenne du voilier.
+
+la portion de route prévisionnelle suivante (d2) qui sera atteint dans (t) devra se situer 
+dans la configuration météorologique prévisionnelle suivante (t2) favorable selon le sens du vent.
