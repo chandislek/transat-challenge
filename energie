@@ -20,7 +20,32 @@ L'énergie est disponible chaque jour perpétuellement.
 III) Inconvénient :
 
 Les panneaux photovoltaïques ne produisent aucune énergie la nuit. Le stockage dans des batteries est crucial.
+
+
+#BATTERIE
+voir vidéo
 https://youtu.be/uyMA7padCKk
+
+le milieu maritime est agressif pour les métaux à cause de la réaction électrolyte favorisé par le sel marin; 
+chaque métal se classe par son potentiel électrique du plus positif au plus négatif, engendrant un courant de fuite lors de 
+leur mise en contact : acier/aluminium, plomb/dioxyde de plomb+acide sulfurique , lithium/ion polymère.
+
+1) Batteries à électrolyte liquide fermées (sans entretien)
+- position horizontale obligatoire
+- supportent très mal des décharges supérieures à 40% de leur capacité (C/40) 
+
+2) Batteries sèches au Gel fermées (sans entretien)
+- Accepte des décharges très profondes (70%) si recharge immédiate,
+- Accepte les charges rapides (jusqu'à C/10)
+
+3) Batteries sèches AGM fermées buvard en fibre de verre (boro-silicate) (Sans entretien)
+- Accepte des décharges très profondes (80%) si recharge immédiate,
+- Accepte les charges rapides (jusqu'à C/4),
+- Faible taux d'auto-décharge (3%)
+
+
+Les batteries de démarrage et les batteries de servitude à décharge profonde répondent à des besoins de puissances opposées;
+quand le démarreur consomme 100A quelques secondes, le matériel électronique consomme 2A pendant des heures.
 
 
 
