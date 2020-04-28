@@ -24,11 +24,23 @@ et un couple plus fort.
 
 1) Couple nécessaire pour les actionneurs
 un être humain actionne une force de 25Kg par impulsion musculaire; la force appliqué par le vent est de:
-62kg pour un vent de 30km/h (15 noeuds) sur une voile de 10m²
-114kg pour un vent de 40km/h (20 noeuds) sur une voile de 10m²
+-62kg pour un vent de 30km/h (15noeuds) sur une voile de 10m²
+-114kg pour un vent de 40km/h (20noeuds) sur une voile de 10m²
 
 l'incidence de la vitesse du vent intervient au carré de sa valeur, tandis que la surface de la voile intervient pour sa valeur.
 
-voilà pourquoi des systèmes de poulies à 4 brins ou des winchs à engrenages sont utilisés sur les voiliers.
+voilà pourquoi des systèmes de palan à 4 brins ou des winchs rapport 4:1 à engrenages sont utilisés sur les voiliers, 
+et que les voiles sont réduites au-dessus de 15noeuds.
+
+pour des rayons d'enroulement de 0,05m les couples nécessaires aux actionneurs:
+-enrouleur génois sans démultiplication de 250N*0,05m =12,5N.m
+-enrouleur de grand-voile sans démultiplication =12,5N.m
+-écoute de génois 20noeuds et 10m² 1140N*0,05m =57N.m
+-écoute de grand-voile 20noeuds et 5m² 570N*0,05m =28,5N.m
+-rail de grand-voile 20noeuds et 5m² =28,5N.m
 
 
+2) Boîte de réduction
+l'utilisation d'un actionneur de 2N.m associé d'une boîte réducteur 30:1 couvre le besoin le plus intense; 
+la vitesse de rotation de 140KV à 24V est 3360tr/min donne après la boîte réducteur 112tr/min presque les 2tr/s 
+ciblés pour nos besoins.
