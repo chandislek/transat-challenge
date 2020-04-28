@@ -2,15 +2,17 @@
 
 Fichiers GRIB:
 
-la connaissance prévisionnelle de la force et la direction du vent, qui s'affine par chronologie décroissante,
-réduit la plage de potentiel dans la prise de décision de la route à suivre, en coordination avec le diagramme polaire du voilier.
+la connaissance prévisionnelle à 5 jours de la force et la direction du vent, mise à jour par tranches de 3 ou 6 heures,
+réduit la plage des choix dans la prise de décision de la route à suivre, en coordination avec le diagramme polaire du voilier.
 
-l'importance d'avoir des points de route intermédiaire selon la rapidité (t) de l'évolution de la météo, correspond à 
-optimiser la couche de survie en milieu agressif.
+l'importance d'avoir des points de route intermédiaires (par 3 heures de navigation) selon la rapidité de l'évolution de la météo, 
+correspond à optimiser le niveau de survie en milieu agressif.
 
-la portion entre deux points de route successifs (d1) doit se situer dans une configuration météorologique favorable 
-à l'avancement pendant la période (t1) pondérée par le ratio de la vitesse d'avancement réelle et 
-la vitesse d'avancement moyenne du voilier.
+la portion entre deux points de route successifs parcourue en 3 heures doit se situer dans un couloir météorologique 
+prévisionnel favorable à l'avancement, le vent soufflant de 50° à 130° degrés de la direction du voilier de 10 à 30noeuds,
+et de 100° à 140° degrés de 35 à 40noeuds; 
+cette distance est calée sur la vitesse d'avancement réelle du voilier, pour intégrer les situations à contre courant marin 
+et définir le cap à suivre.
 
-la portion de route prévisionnelle suivante (d2) qui sera atteint dans (t) devra se situer 
-dans la configuration météorologique prévisionnelle suivante (t2) favorable selon le sens du vent.
+la portion de route prévisionnelle suivante qui sera atteinte dans 3 heures devra être vérifiée se situer 
+dans le couloir météorologique du bulletin prévisionnel des 3 heures suivantes favorable au choix du cap à suivre décidé à ce stade.
