@@ -11,5 +11,30 @@ l'autonomie est atteinte avec le suivi et l'entretien des ressources : l'energie
 et le surplus est emmagasiné dans une batterie, afin de fournir l'électricité pendant la nuit.
 
 le contrôle de la consommation d'énergie rapportée à son stock disponible défini des niveaux de survie opérationnelle, 
-autorisant ou limitant successivement les fonctionnalités d'importance prioritaire croissante : le changement de direction 
-d'évitement d'obstacle est la priorité la plus haute de jour et l'envoi du signal de détresse de collision la plus haute la nuit.
+autorisant ou limitant successivement les fonctionnalités d'importance prioritaire croissante : la réduction de voilure 
+est la priorité la plus haute avant coupure du courant.
+
+
+1) Persistance
+c'est la capacité du voilier à maintenir une allure ordonnée en l'absence total d'électricité; 
+il y a une double implication:
+-lièe à la dynamique portance-antidérive du couple voile-quille; l'équilibre de la répartition des forces des 2 voiles au pivot
+de la carène assuré par la quille.
+-liée au maintien statique du réglage des voiles assuré par des coinceurs dans le sens choquant des bouts.
+
+le voilier doit pouvoir virer d'un bord à l'autre sans nécessité de modifier les réglages des voiles: 
+la grand-voile et le génois sont autovireur selon un rail au guidant qui circulant librement est assuré dans son amplitude 
+par un actionneur;
+Les allures sont limitées de 50° à 130° (+-40° au vent de travers) de 10 à 30noeuds 
+et de 100° à 140° (vent au largue) de 35noeuds à plus.
+
+2) Niveaux prioritaires décroissants
+-réduction de voilure
+-maintien de l'allure par l'autopilote de barre franche
+-capteur de vent (direction et force)
+-navigateur traceur de route avec GPS
+-AIS de surveillance de la circulation maritime
+-réglage des voiles avec mesure de gîte et de vitesse relative (speedomètre)
+-caméra tête de mât avec détection d'obstacle
+-prévision météo et option de navigation
+-caméra surveillance cockpit cabine local technique
