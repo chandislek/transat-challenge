@@ -2,3 +2,22 @@
 
 la mission prioritaire d'un voilier est supplantée par sa survie; l'instinct de survie modifie les priorités établies.
 le reroutage est calculé selon la position du danger, le sens et la force du vent, la direction dynamique de l'obstacle.
+
+le système est constitué de 2 caméras en tête de mât qui regardent à quelques dizaines de mètres devant la proue du voilier;
+les images sont comparées afin de détecter des contrastes persistants sur les 2 caméras, pour éliminer les fausses détections.
+
+les règles de navigation à la voile sont dans le cas de rencontre :
+-priorité au voilier à tribord amure; dont le vent vient de la droite de l'avancement (la voile est à babord).
+-le voilier situé sous le vent par rapport à l'autre voilier, n'a pas la priorité dans le cas où les 2 sont tribord amure.
+
+plusieurs reactions sont prises d'urgence:
+-obstacle à tribord et je suis tribord amure, je vire babord 90° degrés (largue)
+-obstacle à babord et je suis babord amure, je vire tribord 90° degrés (largue)
+
+-obstacle à tribord et je suis babord amure, je vire babord 90° degrés (face au vent)
+-obstacle à babord et je suis tribord amure, je vire tribord 90° degrés (face au vent)
+
+je reprends ma route prévue après 10 minutes.
+
+la tenue face au vent s'obtient en alignant la grand voile au centre du bateau et en maintenant le génois à contre vent.
+
