@@ -3,21 +3,20 @@
 la mission d'un navire est de suivre une route pour se rendre au point d'arrivée depuis sa position instantanée; 
 potentiellement des points de passage intermédiaire sont ajoutés pour vérifier son fonctionnement optimum.
 
-cette route est dépendante des conditions météorologiques comme la direction du vent et sa force, la hauteur des vagues
-et leur direction, la force du courant et sa direction.
-
-des conditions du traffic maritime, des objets flottants non identifiés (OFNI), 
-
-des hauts fonds apparant selon la hauteur de marée.
+cette route est dépendante :
+-des conditions météorologiques comme la direction du vent et sa force, la hauteur des vagues, la direction du courant.
+-des conditions du traffic maritime, des objets flottants non identifiés (OFNI), 
+-des hauts fonds apparents selon la hauteur de marée.
 
 
 La navigation d'un voilier est de plus dépendante de son diagramme polaire (angle vis-à-vis du vent);
-c'est sa carte génétique révélée à sa construction qui exprime un comportement à la jonction de deux milieux qui s'affrontent: 
+c'est la carte génétique de sa construction qui exprime un comportement à la jonction de deux milieux qui s'affrontent: 
 l'air et la mer.
 
 c'est la raison pour laquelle un voilier ne peut pas avancer face au vent, sa vitesse est nulle en direction direct du vent (la cap). 
 selon la direction prise par rapport au vent, sa vitesse sera variable depuis un minimum autour de 40° degrés (le près),
-augmentera jusqu'à un maximum à 90° degrés du vent (le travers), puis diminuera jusqu'à faire un angle de 180° degrés du vent (le portant).
+augmentera jusqu'à un maximum à 90° degrés du vent (le travers), 
+puis diminuera sans s'annuler jusqu'à faire un angle de 180° degrés du vent (le portant).
 
 ce diagramme de vitesse dépend de la force du vent et de la hauteur des vagues (échelle de Beaufort); au-délà d'une certaine 
 force de vent (30 noeuds = 60 km/h), la vitesse du voilier va diminuer au près.
