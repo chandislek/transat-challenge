@@ -7,3 +7,28 @@ réglage de la grand voile.
 
 les mouvements à contrôler dépendent des points de pivots, des câbles métalliques fixes, des bouts textiles à border ou à choquer.
 
+un actionneur transforme l'énergie électrique en mouvement mécanique de rotation par opposition de champs magnétiques; 
+la répulsion et l'attirance du stator (partie fixe) et du rotor (partie mobile) est contrôlé par le courant électrique 
+parcourant les bobines (enroulement de fil de cuivre gainé).
+
+La puissance (Puissance=courant(I) * tension(U) dans les bobines) d'une machine tournante procure un couple mécanique. 
+Ce couple peut-être visualisé comme une force appliquée à un bras de levier, l'ensemble tournant autour de son axe;
+le couple résulte de la puissance divisée par la vitesse de rotation; c'est une force à la périphérie du pignon (Force=couple / rayon).
+
+La roue dentée est un des deux éléments qui composent un engrenage. La roue qui a le moins de dents est le pignon.
+D'un point de vue de la transmission, les deux caractéristiques importantes sont le nombre de dents z
+et le rayon r, ce qui permet de définir, dans un engrenage, le rapport des vitesses et le rapport des efforts (démultiplication).
+
+une vitesse rapide avec un faible couple transmet, via un pignon à une roue dentée plus grande une vitesse plus faible 
+et un couple plus fort.
+
+1) Couple nécessaire pour les actionneurs
+un être humain actionne une force de 25Kg par impulsion musculaire; la force appliqué par le vent est de:
+62kg pour un vent de 30km/h (15 noeuds) sur une voile de 10m²
+114kg pour un vent de 40km/h (20 noeuds) sur une voile de 10m²
+
+l'incidence de la vitesse du vent intervient au carré de sa valeur, tandis que la surface de la voile intervient pour sa valeur.
+
+voilà pourquoi des systèmes de poulies à 4 brins ou des winchs à engrenages sont utilisés sur les voiliers.
+
+
