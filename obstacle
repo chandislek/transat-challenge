@@ -4,7 +4,7 @@ la mission prioritaire d'un voilier est supplantée par sa survie; l'instinct de
 le reroutage est calculé selon la position du danger, le sens et la force du vent, la direction dynamique de l'obstacle.
 
 le système est constitué de 2 caméras en tête de mât qui regardent à quelques dizaines de mètres devant la proue du voilier;
-les images sont comparées afin de détecter des contrastes persistants sur les 2 caméras, pour éliminer les fausses détections.
+les images sont comparées afin de détecter des contrastes persistants pour éliminer les fausses détections.
 
 les règles de navigation à la voile sont dans le cas de rencontre :
 -priorité au voilier à tribord amure; dont le vent vient de la droite de l'avancement (la voile est à babord).
@@ -17,7 +17,19 @@ plusieurs reactions sont prises d'urgence:
 -obstacle à tribord et je suis babord amure, je vire babord 90° degrés (face au vent)
 -obstacle à babord et je suis tribord amure, je vire tribord 90° degrés (face au vent)
 
-je reprends ma route prévue après 10 minutes.
+je reprends ma route prévue après 5 minutes.
 
 la tenue face au vent s'obtient en alignant la grand voile au centre du bateau et en maintenant le génois à contre vent.
+
+1) Distance d'évitement
+la direction du voilier est changé par l'angle du safran avec le sens d'avancement qui peut atteindre 30° degrés en 4s;
+l'efficacité de la quille permet de virer à 90° sur une surface de mer (l'eau) équivalent à la longueur du navire;
+l'automate dédié à la détection d'image traite 1 image par seconde, pondéré par un coefficient de 400% pour levée de doute, 
+puis commande le nouveau cap au pilote automatique en 1 seconde. 
+
+la vitesse d'avancement du voilier est de 5 noeuds (2.5m/s) selon le diagramme polaire, 
+ce qui correspond une distance de 23m couverte en 9s de réaction du safran.
+
+2) Distance de scrutation
+la caméra du système de détection d'obstacle de route doit scruter à 35m et plus, depuis la tête du mat, afin d'être opérationnel.
 
