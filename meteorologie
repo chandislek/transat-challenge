@@ -2,7 +2,7 @@
 
 Fichiers GRIB:
 
-la connaissance prévisionnelle à 5 jours de la force et la direction du vent, mise à jour par tranches de 3 ou 6 heures,
+la connaissance prévisionnelle à 5 jours de la force et la direction du vent, mise à jour par tranches de 3 heures,
 réduit la plage des choix dans la prise de décision de la route à suivre, en coordination avec le diagramme polaire du voilier.
 
 l'importance d'avoir des points de route intermédiaires (par 3 heures de navigation) selon la rapidité de l'évolution de la météo, 
@@ -16,3 +16,54 @@ et définir le cap à suivre.
 
 la portion de route prévisionnelle suivante qui sera atteinte dans 3 heures devra être vérifiée se situer 
 dans le couloir météorologique du bulletin prévisionnel des 3 heures suivantes favorable au choix du cap à suivre décidé à ce stade.
+
+les informations météorologiques SP1(paramètres courants) sont récupérés par téléchargement des fichiers champs de surface ARPEGE 
+sur la grille Globe BDAP 0,5° degré de précision Echéances tri-horaires (tranches de 3 heures) avec 3 ou 4 fichiers selon les runs 
+pour des prévisions sur 5 jours (groupes d'échéances : 0-24h, 27-48h, 51-72h, 75-102h, 103-114h)
+la taille d'un fichier par groupe d'échéance fait 25Mo.
+
+1)Distance géographique
+par convention, il existe sur Terre 360 méridiens séparés par un degré d'arc d'équateur (1° degré de longitude).
+au niveau de l'équateur, la distance entre deux méridiens est égale à 1/360e partie de la longueur de l'équateur (40068km), 
+soit approximativement 111,3 kilomètres.  
+à 45° degrés de latitude, la distance entre deux méridiens (1° degré de longitude) est égale à 111,3 kilomètres multipliés 
+par le cosinus de 45° degrés, soit 0,707, ce qui fait approximativement 78,7 kilomètres.
+
+la distance entre deux parallèles (1° degré de latitude) est 1° degré d'arc de méridien, soit 60 minutes = 60 milles marin, 
+par convention le mille nautique (1852m) a été défini comme la longueur moyenne d'une minute d'arc de méridien; soit 111km.
+
+2)Vitesse de déplacement
+par convention 1 noeud nautique correspond à 1 mille marin par heure, soit exactement 1,852 km/h ou 1852/3600 = 0,5m/s.
+le diagramme polaire du voilier indique 5 noeuds comme vitesse de croisière:
+-15' minutes de latitude par tranche de 3 heures
+-1 quart° degré de latitude par tranche de 3 heures
+-1° degré de latitude par tranche de 12 heures
+
+-21' minutes de longitude (45° degrés NORD=Bordeaux) par tranche de 3 heures
+-moins 1 tier° degré de longitude (45° degrés NORD=Bordeaux) par tranche de 3 heures
+-1° degré de longitude (45° degrés NORD=Bordeaux) par tranche de 8 heures 30 minutes
+
+3)Durée de la traversée
+-2° degrés 50' minutes de longitude (45° degrés NORD=Bordeaux) par tranche de 24 heures
+-69° degrés de longitude de traversée de l'Atlantique de Brest à New-York et 8° degrés de latitude en 28 jours 9 heures
+-65° degrés de longitude de traversée de l'Atlantique de Brest à Boston et 8° degrés de latitude en 27 jours
+
+la traversée de l'Atlantique à une vitesse de croisière de 5 noeuds s'étale sur 6 téléchargements de groupes de prévisions à 5 jours.
+
+
+4)Requête en ligne
+tranches:
+&time=00H24H
+&time=27H148H
+&time=51H72H
+&time=75H102H
+&time=105H114H
+
+date du run:
+&referencetime=2020-05-01T00:00:00Z
+&referencetime=2020-05-01T06:00:00Z
+&referencetime=2020-05-01T12:00:00Z
+&referencetime=2020-05-01T18:00:00Z
+
+
+http://dcpc-nwp.meteo.fr/services/PS_GetCache_DCPCPreviNum?token=__5yLVTdr-sGeHoPitnFc7TZ6MhBcJxuSsoZp6y0leVHU__&model=ARPEGE&grid=0.5&package=SP1&time=75H102H&referencetime=2020-05-01T00:00:00Z&format=grib2
