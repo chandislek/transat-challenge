@@ -22,14 +22,14 @@ je reprends ma route prévue après 5 minutes.
 la tenue face au vent s'obtient en alignant la grand voile au centre du bateau et en maintenant le génois à contre vent.
 
 1) Distance d'évitement
-la direction du voilier est changée par l'angle du safran avec le sens d'avancement qui peut atteindre 30° degrés en 4s;
-l'efficacité de la quille permet de virer à 90° sur une surface de mer (l'eau) équivalent à la longueur du navire;
-l'automate dédié à la détection d'image traite 1 image par seconde, pondéré par un coefficient de 400% pour levée de doute, 
+la direction du voilier est changée par l'angle du safran, selon le sens d'avancement, qui peut atteindre 30° degrés en 4s;
+l'efficacité de la quille permet de virer à 90° sur une surface de mer équivalente à la longueur du navire;
+l'automate dédié à la détection d'image traite 1 image par seconde, puis 3 secondes pour supprimer les fausses détections, 
 puis commande le nouveau cap au pilote automatique en 1 seconde. 
 
 la vitesse d'avancement du voilier est de 5 noeuds (2.5m/s) selon le diagramme polaire, 
-ce qui correspond une distance de 23m couverte en 9s de réaction du safran.
+une distance de 22m est parcourue en 9s de réaction du safran.
 
 2) Distance de scrutation
-la caméra du système de détection d'obstacle de route doit scruter à 35m et plus, depuis la tête du mat, afin d'être opérationnel.
+la caméra du système de détection d'obstacle de route doit scruter à 30m et plus, depuis la tête du mat, afin d'être opérationnel.
 
