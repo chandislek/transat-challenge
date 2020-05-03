@@ -3,7 +3,7 @@
 la mission prioritaire d'un voilier est supplantée par sa survie; l'instinct de survie modifie les priorités établies.
 le reroutage est calculé selon la position du danger, le sens et la force du vent, la direction dynamique de l'obstacle.
 
-le système est constitué d'un caméra en tête de mât qui regardent à quelques dizaines de mètres devant la proue du voilier;
+le système est constitué d'une caméra en tête de mât qui regarde à quelques dizaines de mètres devant la proue du voilier;
 les images sont comparées afin de détecter des contrastes persistants pour éliminer les fausses détections.
 
 les règles de navigation à la voile sont dans le cas de rencontre :
