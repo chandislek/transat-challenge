@@ -77,7 +77,7 @@ cette expérimentation rentre dans un contexte de transition énergétique du tr
 
 l'automate organise en autonomie sa navigation selon les conditions locales tout en respectant un couloir imposé, 
 des points de passage, déterminé et communiqué à distance, par satellite.
-le couloir pour cette traversée est entre la route Sud et la route NORD.
+le couloir pour cette traversée est entre la route Sud et la route Nord.
 
 la technologie de détection d'obstacle en milieu urbain est utilisée pour ne pas être perturbée par les conditions météo.
 
