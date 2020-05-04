@@ -91,3 +91,17 @@ absence de voiles molles et sans guidages,
 la surface des voiles et leur orientation au vent sont évaluées par l'automate en fonction des paramètres environnementaux, 
 selon le diagramme polaire du voilier, pour réguler les tensions mécaniques et la propulsion éolienne, 
 sans interruption pendant toute la durée de la traversée, quelque soit l'état de la mer, en toutes circonstances météorologiques.
+
+l'automate embarqué à bord du voilier réalise les calculs qui lui permettent de prendre les décisions locales les plus stables, en prenant en compte les consignes imposées (destinations, prévisions météorologiques) et les dangers, selon un cycle déterminé, répété plusieurs fois par seconde:
+-lecture des capteurs
+-comparaison entre mouvement réalisé et commande
+-vérifications des consignes imposées (destination, météo)
+-calcul du cap à suivre
+-vérification du dangers, des avaries
+-commandes des voiles et du safran
+
+les informations échangées par satellite concernent les consignes imposées et le rapport technique (dont la position GPS).
+
+quand l'allure du voilier est conservée sans modification, la seule consommation d'électricité est celle des capteurs et du calculateur, correspondant à quelques 3 ampères; aucun actionneur n'est activé, pour maximiser l'autonomie et la robustesse du voilier.
+
+en moyenne un panneau solaire de 175W de 1m² fournissant 70A par jour, permet d'assurer la consommation continue de 3A de l'électronique.
