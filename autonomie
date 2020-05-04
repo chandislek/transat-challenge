@@ -38,3 +38,6 @@ et de 100° à 140° (vent au largue) de 35noeuds à plus.
 -caméra tête de mât avec détection d'obstacle
 -prévision météo et option de navigation
 -caméra surveillance cockpit cabine local technique
+
+3) Electricité solaire
+un panneau solaire de 175W de 1m² fournit 70A par jour, pour assurer la consommation continue de 3A de l'électronique.
