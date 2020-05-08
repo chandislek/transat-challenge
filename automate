@@ -1,31 +1,42 @@
 
 #AUTOMATE EMBARQUE RASPBERRY 3B+
 
-1)embedded linux : https://www.raspberrypi.org/downloads/
-créer l'image RASPIAN sur une carte SDmini
+1)Système d'exploitation : LINUX
+https://www.raspberrypi.org/downloads/
+l'image RASPIAN est enregistrée une carte SDmini
 
-système surveillance vidéo: motionEyeOS
+2) Lecture des fichiers météorologiques : GRIB 2
+https://confluence.ecmwf.int//display/ECC/ecCodes+Home
+l'interface en Python3 des ecCodes se fait conformément à  PyPI https://pypi.org/project/eccodes/
+
+les prévisions sont disponibles librement sur météoFrance
+https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=130&id_rubrique=51
+
+3) système surveillance vidéo: motionEyeOS
 https://github.com/ccrisan/motioneyeos/wiki
 
-système IOT : windows 10
+4) système détection d'obstacle : YOLO darknet et VPU MOVIDIUS NCS 2
+bibliothèque VPU : openVino
+bibliothèque détection d'obstacle : opencv
+
+5)système d'exploitation navigation : openplotter
+http://www.sailoog.com/openplotter
+https://openplotter.readthedocs.io/en/latest/getting_started/downloading.html
+
+logiciel traceur : openCPN
+https://opencpn.org/OpenCPN/info/downloads.html
+autopilote: 
+http://pypilot.org/wiki/doku.php
+
+6)carte d'interface physique :
+-capteurs
+
+-actionneurs
+
+
+7) Alternative système IOT : windows 10
 https://devblogs.microsoft.com/premier-developer/getting-started-with-windows-10-iot-core-raspberry-pi-3b/
 https://www.microsoft.com/en-us/software-download/windows10iotcore
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/rpi
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/adafruitkit
 
-système traceur : openplotter
-http://www.sailoog.com/openplotter
-https://openplotter.readthedocs.io/en/latest/getting_started/downloading.html
-traceur : openCPN
-https://opencpn.org/OpenCPN/info/downloads.html
-autopilote: 
-http://pypilot.org/wiki/doku.php
-
-bibliothèque détection d'obstacle : opencv
-
-système détection d'obstacle : YOLO darknet
-
-VPU intel USB3.0 MOVIDIUS NCS 2:
-bibliothèque VPU openVino:
-
-GPU Nvidia JETSON carte:
