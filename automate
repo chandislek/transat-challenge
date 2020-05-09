@@ -18,12 +18,19 @@ https://www.realvnc.com/fr/connect/download/viewer/windows/
 
 la création d'un fichier de programme python3 : 
 sudo nano chandislek.py
-
 exécution du fichier :
 sudo python chandislek.py
 
 carte extension capteur : GROVEPI+
 https://www.youtube.com/watch?v=lsaXVRk6mKE
+installation de la bibliothèque correspodante:
+curl -kL dexterindustries.com/update_grovepi | bash
+
+Mettre à jour la liste des paquets et la mise à niveau de RASPIAN :
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt clean
+sudo reboot
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
