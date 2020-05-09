@@ -4,6 +4,26 @@
 1)Système d'exploitation : LINUX
 https://www.raspberrypi.org/downloads/
 l'image RASPIAN est enregistrée une carte SDmini
+avec SSH activé , login pi , hostname raspberrypi
+
+connection par terminal texte depuis PC @raspberrypi:
+https://www.putty.org/
+
+connexion par VNC depuis terminal PC avec serverVNC activé:
+sudo raspi-config
+aller dans menu"interfacing option""VNC"
+
+connection par VNCviewer sur PC @raspberrypi:
+https://www.realvnc.com/fr/connect/download/viewer/windows/
+
+la création d'un fichier de programme python3 : 
+sudo nano chandislek.py
+
+exécution du fichier :
+sudo python chandislek.py
+
+carte extension capteur : GROVEPI+
+https://www.youtube.com/watch?v=lsaXVRk6mKE
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
