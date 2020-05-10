@@ -3,7 +3,7 @@
 
 1)Système d'exploitation : LINUX
 https://www.raspberrypi.org/downloads/
-l'image RASPIAN est enregistrée une carte SDmini
+l'image RASPBIAN est enregistrée une carte SDmini
 avec SSH activé , login pi , hostname raspberrypi
 
 connection par terminal texte depuis PC @raspberrypi:
@@ -20,17 +20,22 @@ la création d'un fichier de programme python3 :
 sudo nano chandislek.py
 exécution du fichier :
 sudo python chandislek.py
+affiche un fichier :
+cat chandislek.py
 
-carte extension capteur : GROVEPI+
+carte extension capteur : GROVEPI+ dexter seeed
 https://www.youtube.com/watch?v=lsaXVRk6mKE
-installation de la bibliothèque correspodante:
+récupérer des fichiers sur internet et installation de la bibliothèque grovepi :
 curl -kL dexterindustries.com/update_grovepi | bash
+récupérer le repository grovepi :
+git clone https://github.com/DexterInd/GrovePi.git
 
-Mettre à jour la liste des paquets et la mise à niveau de RASPIAN :
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt clean
-sudo reboot
+vérification liaison RASPI-GROVEPI+ :
+sudo i2cdetect -y 1
+test LED au port4 :
+cd /home/pi/Dexter/GrovePi/Software/Python
+python grove_led_blink.py
+
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
@@ -66,4 +71,34 @@ https://devblogs.microsoft.com/premier-developer/getting-started-with-windows-10
 https://www.microsoft.com/en-us/software-download/windows10iotcore
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/rpi
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/adafruitkit
+
+8) command line RASPI :
+ls
+cd
+tree
+df -h
+git
+curl
+
+9) compiler une application source pour RASPI :
+./configure --help
+make
+make install
+
+10) Mettre à jour la liste des paquets et la mise à niveau de RASPBIAN :
+add-apt-repository nomrepositorynonraspbian
+sudo apt-get update
+apt-get install nompaquet
+
+apt list --upgradable
+apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt clean
+sudo reboot
+
+dpkg --get-selections -l
+apt-cache search nompaquet
+apt-cache show
+apt-get purge nompaquet
+
 
