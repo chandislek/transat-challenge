@@ -36,9 +36,10 @@ bash ./update_grovepi.sh
 
 vérification liaison RASPI-GROVEPI+ :
 sudo i2cdetect -y 1
-test LED au port4 :
-cd /home/pi/Dexter/GrovePi/Software/Python
-python grove_led_blink.py
+test LCD :
+cd /home/pi/Dexter/GrovePi/Software/Python/grove_rgb_lcd
+python grove_rgb_lcd.py
+
 
 connection des modules grove :
 Grove – Relay > D2
