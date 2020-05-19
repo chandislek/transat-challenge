@@ -1,5 +1,5 @@
 
-#AUTOMATE EMBARQUE RASPBERRY 3B+
+#AUTOMATE EMBARQUE RASPBERRY 3B+ 'Raspberry Pi 3 B Plus'
 
 1)Système d'exploitation : LINUX
 https://www.raspberrypi.org/downloads/
@@ -25,7 +25,10 @@ cat chandislek.py
 
 carte extension capteur : GROVEPI+ dexter seeed
 https://www.youtube.com/watch?v=lsaXVRk6mKE
-récupérer des fichiers sur internet et installation de la bibliothèque grovepi :
+Brancher carte grovepi plus ;
+En terminal : Autoriser I2c dans sudo raspi-config
+
+récupérer des fichiers sur internet et installation de la bibliothèque grovepi de DEXTER :
 curl -kL dexterindustries.com/update_grovepi | bash
 ou récupérer le repository grovepi :
 mkdir ~/Dexter
@@ -33,6 +36,17 @@ cd /home/pi/Dexter
 git clone https://github.com/DexterInd/GrovePi.git
 cd /home/pi/Dexter/GrovePi/Script
 bash ./update_grovepi.sh
+ou la bibliothèque grovepi de SEEED:
+curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s –
+git clone https://github.com/Seeed-Studio/Grove_Base_Kit_Sketchbook
+
+ 
+
+documentation API : 
+https://seeed-studio.github.io/grove.py/
+
+forum :
+https://forum.seeedstudio.com/
 
 vérification liaison RASPI-GROVEPI+ :
 sudo i2cdetect -y 1
@@ -96,6 +110,8 @@ tree
 df -h
 git
 curl
+startx
+halt
 
 9) compiler une application source pour RASPI :
 ./configure --help
@@ -118,4 +134,16 @@ apt-cache search nompaquet
 apt-cache show
 apt-get purge nompaquet
 
+11) Ecran 800*480 5 inch HDMI display with usb touch screen :
+https://www.youtube.com/watch?v=kxli3TIWau8
+http://wiki.52pi.com/index.php/5-Inch-800x480-HDMI-TFT-LCD-Touch-Screen_SKU:Z-0053
 
+modifier /boot/config.txt  :
+framebuffer_width=800
+framebuffer_height=480
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt  800  480  60  3  0  0  0
+device_tree=bcm2710-rpi-3-b-plus.dtb
+dtparam=spi=on
