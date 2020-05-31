@@ -23,7 +23,7 @@ sudo python chandislek.py
 affiche un fichier :
 cat chandislek.py
 
-carte extension capteur : GROVEPI+ dexter seeed
+carte extension capteur : GROVEPI+ dexter seeed Arduino Uno 
 https://www.youtube.com/watch?v=lsaXVRk6mKE
 Brancher carte grovepi plus ;
 En terminal : Autoriser I2c dans sudo raspi-config
@@ -54,6 +54,17 @@ test LCD :
 cd /home/pi/Dexter/GrovePi/Software/Python/grove_rgb_lcd
 python grove_rgb_lcd.py
 
+Vérification liaison SPI :
+ls -l /dev/spidev*
+
+broches du RASPI (26 ou 40) :
+pour motorisation ESC en PWM, 12
+série UART TX-RX RPIser, 8-10
+I2C, 3-5
+SPI, 19-21-23-24-26
+GPIO, 7-11-13-15-12-16-18-22
+GPIO étendu, 29-31-33-35-37-32-36-38-40
+DNC, 27-28
 
 connection des modules grove :
 Grove – Relay > D2
