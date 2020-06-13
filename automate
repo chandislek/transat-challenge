@@ -159,7 +159,7 @@ hdmi_cvt  800  480  60  3  0  0  0
 device_tree=bcm2710-rpi-3-b-plus.dtb
 dtparam=spi=on
 
-12) python pour grove : <ctrl>+z pour break
+12) python pour grove : <ctrl>+z pour break + exit
 import time
 import grovepi
 
