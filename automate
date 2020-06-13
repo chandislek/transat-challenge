@@ -40,7 +40,9 @@ ou la bibliothèque grovepi de SEEED:
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s –
 git clone https://github.com/Seeed-Studio/Grove_Base_Kit_Sketchbook
 
- 
+flash le dernier firmware dans GrovePi Arduino :
+cd /home/pi/Dexter/GrovePi/Firmware
+bash firmware_update.sh
 
 documentation API : 
 https://seeed-studio.github.io/grove.py/
@@ -163,6 +165,8 @@ dtparam=spi=on
 import time
 import grovepi
 
+print(grovepi.version())
+
 # Connect the Grove Rotary Angle Sensor to analog port A0
 # SIG,NC,VCC,GND
 potentiometer = 0
@@ -218,3 +222,10 @@ while True:
         break
     except IOError:
         print ("Error")
+        
+13) fonctions grovepi:
+grovepi.digitalRead(pin)
+grovepi.digitalWrite(pin, value)
+grovepi.analogRead(pin)
+grovepi.analogWrite(pin, value)
+grovepi.pinMode(pin, mode)
