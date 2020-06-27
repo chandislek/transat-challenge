@@ -6,6 +6,18 @@ https://www.raspberrypi.org/downloads/
 l'image RASPBIAN est enregistrée une carte SDmini
 avec SSH activé , login pi , hostname raspberrypi, raspberry
 
+fichier bloc note "wpa_supplicant.conf" :
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=FR
+network={
+    ssid="Bbox_EXT"
+    psk=""
+}
+
+fichier bloc note "ssh" vide :
+enregistrer sans extension avec l'utilisation des "" autour du nom
+
 connection par terminal texte depuis PC @raspberrypi:
 https://www.putty.org/
 
