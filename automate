@@ -1,9 +1,9 @@
 
-#AUTOMATE EMBARQUE RASPBERRY 3B+ 'Raspberry Pi 3 B Plus'
+#AUTOMATE EMBARQUE RASPBERRY 3B+ 'Raspberry Pi 3 B Plus' armhf architecture
 
 1)Système d'exploitation : LINUX
 https://www.raspberrypi.org/downloads/
-l'image RASPBIAN est enregistrée une carte SDmini
+l'image RASPBIAN est enregistrée une carte SDmini 8Gb
 avec SSH activé , login pi , hostname raspberrypi, raspberry
 
 fichier bloc note "wpa_supplicant.conf" :
@@ -23,7 +23,17 @@ https://www.putty.org/
 
 connexion par VNC depuis terminal PC avec serverVNC activé:
 sudo raspi-config
-aller dans menu"interfacing option""VNC"
+5-interfacing Options
+VNC on
+SPI on
+I2C on
+
+7-advanced Options
+A1-expand Filesystem
+
+3-boot Options
+B1-desktops
+console ou desktop
 
 connection par VNCviewer sur PC @raspberrypi:
 https://www.realvnc.com/fr/connect/download/viewer/windows/
@@ -42,15 +52,19 @@ En terminal : Autoriser I2c dans sudo raspi-config
 
 récupérer des fichiers sur internet et installation de la bibliothèque grovepi de DEXTER :
 curl -kL dexterindustries.com/update_grovepi | bash
+
 ou récupérer le repository grovepi :
 mkdir ~/Dexter
 cd /home/pi/Dexter
 git clone https://github.com/DexterInd/GrovePi.git
 cd /home/pi/Dexter/GrovePi/Script
 bash ./update_grovepi.sh
+
 ou la bibliothèque grovepi de SEEED:
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s –
 git clone https://github.com/Seeed-Studio/Grove_Base_Kit_Sketchbook
+git clone https://github.com/Seeed-Studio/grove.py
+git clone https://github.com/Seeed-Studio/GrovePi
 
 flash le dernier firmware dans GrovePi Arduino :
 cd /home/pi/Dexter/GrovePi/Firmware
