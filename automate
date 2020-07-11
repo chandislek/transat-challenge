@@ -312,7 +312,6 @@ p.stop()
 GPIO.cleanup()
 
 15) Gear stepper motor driver pack
-
 # Import required libraries
 import sys
 import time
@@ -331,25 +330,41 @@ for pin in chan_list:
   print "Setup pins"
   GPIO.setup(pin,GPIO.OUT)
 
-#initialize array for sequence shift
-arr1 = [1,1,0,0]
-arr2 = [0,1,0,0]
+GPIO.output(chan_list, (0,0,0,0))
 
-def move():
+#initialize array for sequence shift
+arr1 = [1,0,0,0]
+arr2 = [1,0,0,1]
+arr3 = [0,0,0,1]
+
+def move(argv):
   global arr1 # enables the edit of arr1 var inside a function
   global arr2 # enables the edit of arr2 var inside a function
-  arrOUT = arr1[1:]+arr1[:1] # rotates array values of 1 digit
-  arr1 = arr2
-  arr2 = arrOUT
+  global arr3 # enables the edit of arr3 var inside a function
+  if argv == "-":
+    arrOUT = arr3[3:]+arr3[:3] # opposite rotates array values of 1 digit
+    arr3 = arr2
+    arr2 = arrOUT
+  else:
+    arrOUT = arr1[1:]+arr1[:1] # rotates array values of 1 digit
+    arr1 = arr2
+    arr2 = arrOUT
+
   GPIO.output(chan_list, arrOUT)
+  #print ("pin stepper = %s" %(arrOUT))
   time.sleep(delay)
 
 # Start main loop
 while True:
   try:
-   move()
+   if len(sys.argv) > 1:
+     move(sys.argv[1])
+   else:
+     move("+")
+
   except KeyboardInterrupt:
     GPIO.output(chan_list, (0,0,0,0))
+    GPIO.cleanup()
     sys.exit()
 
 16) PWM hardware Adafruit 16-Channel 12-bit PWM en I2C
