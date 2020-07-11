@@ -106,6 +106,24 @@ Grove – Sound Sensor > A1
 Grove – Light Sensor > A2
 Grove – LCD Display > I2C
 
+connection des moteurs :
+GPIO 17 (phrase PWM IN1) pin11
+GPIO 27 (phrase PWM IN2) pin13
+GPIO 22 (phrase PWM IN3) pin15
+GPIO 23 (phrase PWM IN4) pin16
+GND                      pin6
+VCC                      pin4
+VM
+
+sudo apt install rpi.gpio
+SEQ1	SEQ2	SEQ3	SEQ4	SEQ5	SEQ6	SEQ7	SEQ8
+IN4	1	1	0	0	0	0	0	1
+IN3	0	1	1	1	0	0	0	0
+IN2	0	0	0	1	1	1	0	0
+IN1	0	0	0	0	0	1	1	1
+wget https://peppe8o.com/wp-content/uploads/2020/02/stepper.py
+
+
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
@@ -260,6 +278,7 @@ grovepi.analogWrite(pin, value)
 grovepi.pinMode(pin, mode)
 
 14) PWM logiciel :
+#pour moteur DC avec 2 fils sur pin12
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12, GPIO.OUT)
@@ -271,7 +290,7 @@ p.stop()
 GPIO.cleanup()
  
 An example to brighten/dim an LED:
- 
+#pour LED avec 2 fils sur pin12
 import time
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
@@ -292,4 +311,45 @@ except KeyboardInterrupt:
 p.stop()
 GPIO.cleanup()
 
-15) PWM hardware Adafruit 16-Channel 12-bit PWM en I2C
+15) Gear stepper motor driver pack
+
+# Import required libraries
+import sys
+import time
+import RPi.GPIO as GPIO
+
+# define variables
+chan_list = [17,27,22,23] # GPIO ports to use
+delay=.001 # delay between each sequence step
+
+# Use BCM GPIO references
+# instead of physical pin numbers
+GPIO.setmode(GPIO.BCM)
+
+# Set all pins as output
+for pin in chan_list:
+  print "Setup pins"
+  GPIO.setup(pin,GPIO.OUT)
+
+#initialize array for sequence shift
+arr1 = [1,1,0,0]
+arr2 = [0,1,0,0]
+
+def move():
+  global arr1 # enables the edit of arr1 var inside a function
+  global arr2 # enables the edit of arr2 var inside a function
+  arrOUT = arr1[1:]+arr1[:1] # rotates array values of 1 digit
+  arr1 = arr2
+  arr2 = arrOUT
+  GPIO.output(chan_list, arrOUT)
+  time.sleep(delay)
+
+# Start main loop
+while True:
+  try:
+   move()
+  except KeyboardInterrupt:
+    GPIO.output(chan_list, (0,0,0,0))
+    sys.exit()
+
+16) PWM hardware Adafruit 16-Channel 12-bit PWM en I2C
