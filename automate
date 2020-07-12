@@ -148,6 +148,7 @@ https://opencpn.org/OpenCPN/info/downloads.html
 autopilote: 
 http://pypilot.org/wiki/doku.php
 
+
 6)carte d'interface physique :
 -capteurs
 module GROVE et CAN NMEA
@@ -157,11 +158,20 @@ https://www.gotronic.fr/art-module-bus-can-sbc-can01-28405.htm
 -actionneurs
 moteur en PWM avec VESC
 
+-multiplexeur NMEA0183 NMEA2000 arduino raspberry
+https://kingtidesailing.blogspot.com/2017/08/cheap-arduino-nmea-0183-wind-sensor.html
+https://www.framboise314.fr/un-gps-usb-pour-le-raspberry-pi/
+https://www.instructables.com/id/How-to-Use-NMEA-0183-With-Raspberry-Pi/
+https://voilier-idem.com/accueil/page/58
+https://pysselilivet.blogspot.com/2018/03/nmea-wifi-gateway.html
+
+
 7) Alternative système IOT : windows 10
 https://devblogs.microsoft.com/premier-developer/getting-started-with-windows-10-iot-core-raspberry-pi-3b/
 https://www.microsoft.com/en-us/software-download/windows10iotcore
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/rpi
 https://docs.microsoft.com/fr-fr/windows/iot-core/tutorials/adafruitkit
+
 
 8) command line RASPI :
 ls
@@ -194,6 +204,7 @@ apt-cache search nompaquet
 apt-cache show
 apt-get purge nompaquet
 
+
 11) Ecran 800*480 5 inch HDMI display with usb touch screen :
 https://www.youtube.com/watch?v=kxli3TIWau8
 http://wiki.52pi.com/index.php/5-Inch-800x480-HDMI-TFT-LCD-Touch-Screen_SKU:Z-0053
@@ -207,6 +218,7 @@ hdmi_mode=87
 hdmi_cvt  800  480  60  3  0  0  0
 device_tree=bcm2710-rpi-3-b-plus.dtb
 dtparam=spi=on
+
 
 12) python pour grove : <ctrl>+z pour break + exit
 import time
