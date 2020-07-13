@@ -70,6 +70,9 @@ flash le dernier firmware dans GrovePi Arduino :
 cd /home/pi/Dexter/GrovePi/Firmware
 bash firmware_update.sh
 
+multiple GrovePi :
+https://www.dexterindustries.com/GrovePi/programming/using-multiple-grovepis-together/
+
 documentation API : 
 https://seeed-studio.github.io/grove.py/
 
@@ -122,8 +125,9 @@ IN3	0	1	1	1	0	0	0	0
 IN2	0	0	0	1	1	1	0	0
 IN1	0	0	0	0	0	1	1	1
 wget https://peppe8o.com/wp-content/uploads/2020/02/stepper.py
-
-
+https://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/
+https://pypi.org/project/raspberry-i2c-tb6612fng/
+https://pypi.org/project/python-periphery/
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
