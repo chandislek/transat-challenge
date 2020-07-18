@@ -66,7 +66,7 @@ git clone https://github.com/Seeed-Studio/Grove_Base_Kit_Sketchbook
 git clone https://github.com/Seeed-Studio/grove.py
 git clone https://github.com/Seeed-Studio/GrovePi
 
-flash le dernier firmware dans GrovePi Arduino :
+flash le dernier firmware dans GrovePi Arduino par la connection SPI:
 cd /home/pi/Dexter/GrovePi/Firmware
 bash firmware_update.sh
 
@@ -79,13 +79,13 @@ https://seeed-studio.github.io/grove.py/
 forum :
 https://forum.seeedstudio.com/
 
-vérification liaison RASPI-GROVEPI+ :
+vérification liaison RASPI-GROVEPI+ pour lecture-écriture sur capteurs-actionneurs:
 sudo i2cdetect -y 1
 test LCD :
 cd /home/pi/Dexter/GrovePi/Software/Python/grove_rgb_lcd
 python grove_rgb_lcd.py
 
-Vérification liaison SPI :
+Vérification liaison SPI pour écrire HEX dans arduino:
 ls -l /dev/spidev*
 
 broches du RASPI (26 ou 40) :
@@ -95,7 +95,7 @@ I2C, 3-5
 SPI, 19-21-23-24-26
 GPIO, 7-11-13-15-12-16-18-22
 GPIO étendu, 29-31-33-35-37-32-36-38-40
-DNC, 27-28
+DNC EEPROM, 27-28
 
 connection des modules grove :
 Grove – Relay > D2
@@ -109,7 +109,7 @@ Grove – Sound Sensor > A1
 Grove – Light Sensor > A2
 Grove – LCD Display > I2C
 
-connection des moteurs :
+connection des moteurs en PWM :
 GPIO 17 (phrase PWM IN1) pin11
 GPIO 27 (phrase PWM IN2) pin13
 GPIO 22 (phrase PWM IN3) pin15
@@ -118,16 +118,27 @@ GND                      pin6
 VCC                      pin4
 VM
 
+bibliothèque de commande des ports GPIO :
 sudo apt install rpi.gpio
+
+séquence de commande de moteur 4 phases unipolaire (0-5V) 8 séquences:
 SEQ1	SEQ2	SEQ3	SEQ4	SEQ5	SEQ6	SEQ7	SEQ8
 IN4	1	1	0	0	0	0	0	1
 IN3	0	1	1	1	0	0	0	0
 IN2	0	0	0	1	1	1	0	0
 IN1	0	0	0	0	0	1	1	1
 wget https://peppe8o.com/wp-content/uploads/2020/02/stepper.py
+
 https://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/
-https://pypi.org/project/raspberry-i2c-tb6612fng/
 https://pypi.org/project/python-periphery/
+https://github.com/vsergeev/python-periphery
+
+module GROVE driver moteur :
+https://wiki.seeedstudio.com/Grove-I2C_Motor_Driver-TB6612FNG/
+https://pypi.org/project/raspberry-i2c-tb6612fng/
+https://wiki.seeedstudio.com/Grove-I2C-Motor-Driver-L298P/
+
+
 
 2) Lecture des fichiers météorologiques : GRIB 2
 https://confluence.ecmwf.int//display/ECC/ecCodes+Home
@@ -184,8 +195,10 @@ tree
 df -h
 git
 curl
+wget
 startx
 halt
+sudo apt install
 
 9) compiler une application source pour RASPI :
 ./configure --help
