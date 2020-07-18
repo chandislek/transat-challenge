@@ -118,6 +118,11 @@ GND                      pin6
 VCC                      pin4
 VM
 
+connection des moteurs en variateur de vitesse ESC :
+GPIO 4  pin7
+GND     pin9
+http://stephane.lavirotte.com/perso/rov/esc_brushless_raspberry.html
+
 bibliothèque de commande des ports GPIO :
 sudo apt install rpi.gpio
 
