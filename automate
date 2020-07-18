@@ -110,6 +110,20 @@ Grove – Light Sensor > A2
 Grove – LCD Display > I2C
 
 connection des moteurs en PWM :
+sudo apt-get install wiringpi
+https://github.com/WiringPi/WiringPi-Python
+
+
+connection des moteurs en variateur de vitesse ESC :
+GPIO 4  pin7
+GND     pin9
+http://stephane.lavirotte.com/perso/rov/esc_brushless_raspberry.html
+https://github.com/richardghirst/PiBits/tree/master/ServoBlaster
+
+bibliothèque de commande des ports GPIO :
+sudo apt install rpi.gpio
+
+connection des moteurs en H-bridge driver :
 GPIO 17 (phrase PWM IN1) pin11
 GPIO 27 (phrase PWM IN2) pin13
 GPIO 22 (phrase PWM IN3) pin15
@@ -117,14 +131,6 @@ GPIO 23 (phrase PWM IN4) pin16
 GND                      pin6
 VCC                      pin4
 VM
-
-connection des moteurs en variateur de vitesse ESC :
-GPIO 4  pin7
-GND     pin9
-http://stephane.lavirotte.com/perso/rov/esc_brushless_raspberry.html
-
-bibliothèque de commande des ports GPIO :
-sudo apt install rpi.gpio
 
 séquence de commande de moteur 4 phases unipolaire (0-5V) 8 séquences:
 SEQ1	SEQ2	SEQ3	SEQ4	SEQ5	SEQ6	SEQ7	SEQ8
