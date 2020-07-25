@@ -113,12 +113,27 @@ connection des moteurs en PWM :
 sudo apt-get install wiringpi
 https://github.com/WiringPi/WiringPi-Python
 
-
 connection des moteurs en variateur de vitesse ESC :
+git clone git://github.com/richardghirst/PiBits.git
+cd PiBits/ServoBlaster/user
+nano init-script
+# Supprimer la valeur --idle-timeout=2000 des options par défaut
+nano servod.c
+# Modifier la ligne 960 pour avoir "else if (strstr(modelstr, "BCM2709") || strstr(modelstr, "BCM2835"))"
+make
+sudo make install
+sudo ./servod
+sudo killall servod
+
+le mapping est ./servod 0 pour :
 GPIO 4  pin7
 GND     pin9
 http://stephane.lavirotte.com/perso/rov/esc_brushless_raspberry.html
-https://github.com/richardghirst/PiBits/tree/master/ServoBlaster
+
+echo 0=0 > /dev/servoblaster
+pulse width of 1.2ms
+echo 0=120 > /dev/servoblaster
+echo 0=180 > /dev/servoblaster
 
 bibliothèque de commande des ports GPIO :
 sudo apt install rpi.gpio
